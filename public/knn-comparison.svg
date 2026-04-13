@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="180" y1="120" x2="500" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="700" y1="120" x2="1020" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="36" fill="url(#bg2)"/>
+  <circle cx="220" cy="150" r="150" fill="#38bdf8" fill-opacity="0.10"/>
+  <circle cx="960" cy="560" r="220" fill="#f97316" fill-opacity="0.10"/>
+  <text x="96" y="96" fill="#e2e8f0" font-family="Inter,Segoe UI,Arial" font-size="26" font-weight="700">Comparación de estrategias KNN</text>
+  <text x="96" y="126" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="15">Cola de Prioridad vs Radio Incremental sobre estructuras compactas</text>
+
+  <rect x="92" y="170" width="500" height="420" rx="28" fill="#0f172a" stroke="#38bdf8" stroke-opacity="0.25"/>
+  <rect x="608" y="170" width="500" height="420" rx="28" fill="#0f172a" stroke="#f97316" stroke-opacity="0.25"/>
+
+  <text x="136" y="218" fill="#7dd3fc" font-family="Inter,Segoe UI,Arial" font-size="22" font-weight="700">Cola de Prioridad</text>
+  <text x="652" y="218" fill="#fdba74" font-family="Inter,Segoe UI,Arial" font-size="22" font-weight="700">Radio Incremental</text>
+
+  <path d="M160 520C210 470 250 442 300 390C350 336 372 290 430 246" stroke="url(#blue)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M675 500C704 460 725 432 748 398C770 363 782 336 789 302C796 266 822 244 867 232" stroke="url(#orange)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <circle cx="154" cy="520" r="18" fill="#38bdf8"/>
+    <circle cx="231" cy="444" r="16" fill="#7dd3fc"/>
+    <circle cx="304" cy="391" r="14" fill="#bae6fd"/>
+    <circle cx="374" cy="318" r="12" fill="#e0f2fe"/>
+    <circle cx="446" cy="250" r="10" fill="#ffffff"/>
+    <circle cx="675" cy="500" r="18" fill="#fb923c"/>
+    <circle cx="748" cy="399" r="16" fill="#fdba74"/>
+    <circle cx="789" cy="302" r="14" fill="#fed7aa"/>
+    <circle cx="867" cy="232" r="12" fill="#fff7ed"/>
+  </g>
+
+  <rect x="136" y="260" width="420" height="92" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="158" y="294" fill="#cbd5e1" font-family="Inter,Segoe UI,Arial" font-size="17">Explora primero los candidatos</text>
+  <text x="158" y="322" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Mejor cuando la cola prioriza nodos cercanos.</text>
+
+  <rect x="652" y="260" width="420" height="92" rx="18" fill="#111827" stroke="#334155"/>
+  <text x="674" y="294" fill="#cbd5e1" font-family="Inter,Segoe UI,Arial" font-size="17">Expande el radio de forma gradual</text>
+  <text x="674" y="322" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Menor memoria auxiliar, más iteraciones controladas.</text>
+
+  <rect x="136" y="382" width="420" height="162" rx="18" fill="#0b1220" stroke="#1e293b"/>
+  <text x="158" y="418" fill="#e2e8f0" font-family="Inter,Segoe UI,Arial" font-size="18" font-weight="700">Costo relativo</text>
+  <rect x="158" y="446" width="350" height="16" rx="8" fill="#1e293b"/>
+  <rect x="158" y="446" width="240" height="16" rx="8" fill="#38bdf8"/>
+  <text x="158" y="492" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Rápida exploración, pero con mayor estructura auxiliar.</text>
+  <text x="158" y="520" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Útil cuando se busca priorizar tiempo de respuesta.</text>
+
+  <rect x="652" y="382" width="420" height="162" rx="18" fill="#0b1220" stroke="#1e293b"/>
+  <text x="674" y="418" fill="#e2e8f0" font-family="Inter,Segoe UI,Arial" font-size="18" font-weight="700">Costo relativo</text>
+  <rect x="674" y="446" width="350" height="16" rx="8" fill="#1e293b"/>
+  <rect x="674" y="446" width="170" height="16" rx="8" fill="#f97316"/>
+  <text x="674" y="492" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Más económico en memoria auxiliar.</text>
+  <text x="674" y="520" fill="#94a3b8" font-family="Inter,Segoe UI,Arial" font-size="14">Puede requerir más pasos, pero escala bien.</text>
+</svg>
